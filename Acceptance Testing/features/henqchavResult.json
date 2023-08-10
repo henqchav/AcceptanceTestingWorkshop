@@ -1,0 +1,438 @@
+[
+    {
+       "keyword":"Feature",
+       "name":"To-Do List Manager",
+       "tags":[
+          
+       ],
+       "location":"todo_list.feature:1",
+       "status":"passed",
+       "elements":[
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Adding a task to the to-do list",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:3",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list is empty",
+                   "location":"todo_list.feature:4",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:6",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0010004043579101562
+                   }
+                },
+                {
+                   "keyword":"When",
+                   "step_type":"when",
+                   "name":"the user adds a task \"Buy groceries\"",
+                   "location":"todo_list.feature:5",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:11",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0009987354278564453
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the to-do list should contain \"Buy groceries\"",
+                   "location":"todo_list.feature:6",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:16",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                }
+             ],
+             "status":"passed"
+          },
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Listing all tasks in the to-do list",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:8",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list contains the following tasks",
+                   "location":"todo_list.feature:9",
+                   "table":{
+                      "headings":[
+                         "Task"
+                      ],
+                      "rows":[
+                         [
+                            "Buy groceries"
+                         ],
+                         [
+                            "Pay bills"
+                         ]
+                      ]
+                   },
+                   "match":{
+                      "location":"steps/todo_list_steps.py:24",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"When",
+                   "step_type":"when",
+                   "name":"the user lists all tasks",
+                   "location":"todo_list.feature:13",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:34",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0009984970092773438
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the output should contain the following tasks",
+                   "location":"todo_list.feature:14",
+                   "table":{
+                      "headings":[
+                         "Task"
+                      ],
+                      "rows":[
+                         [
+                            "Buy groceries"
+                         ],
+                         [
+                            "Pay bills"
+                         ]
+                      ]
+                   },
+                   "match":{
+                      "location":"steps/todo_list_steps.py:50",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                }
+             ],
+             "status":"passed"
+          },
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Marking a task as completed",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:19",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list contains the following tasks",
+                   "location":"todo_list.feature:20",
+                   "table":{
+                      "headings":[
+                         "Task",
+                         "Status"
+                      ],
+                      "rows":[
+                         [
+                            "Buy groceries",
+                            "Pending"
+                         ]
+                      ]
+                   },
+                   "match":{
+                      "location":"steps/todo_list_steps.py:24",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"When",
+                   "step_type":"when",
+                   "name":"the user marks task \"Buy groceries\" as completed",
+                   "location":"todo_list.feature:23",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:59",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the to-do list should show task \"Buy groceries\" as completed",
+                   "location":"todo_list.feature:24",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:64",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                }
+             ],
+             "status":"passed"
+          },
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Marking a task as pending",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:26",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list contains the following tasks",
+                   "location":"todo_list.feature:27",
+                   "table":{
+                      "headings":[
+                         "Task",
+                         "Status"
+                      ],
+                      "rows":[
+                         [
+                            "Buy groceries",
+                            "Completed"
+                         ]
+                      ]
+                   },
+                   "match":{
+                      "location":"steps/todo_list_steps.py:24",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"When",
+                   "step_type":"when",
+                   "name":"the user marks task \"Buy groceries\" as pending",
+                   "location":"todo_list.feature:30",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:80",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the to-do list should show task \"Buy groceries\" as pending",
+                   "location":"todo_list.feature:31",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:85",
+                      "arguments":[
+                         {
+                            "value":"Buy groceries",
+                            "name":"task_description"
+                         }
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                }
+             ],
+             "status":"passed"
+          },
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Clearing the entire to-do list",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:33",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list contains the following tasks",
+                   "location":"todo_list.feature:34",
+                   "table":{
+                      "headings":[
+                         "Task"
+                      ],
+                      "rows":[
+                         [
+                            "Buy groceries"
+                         ],
+                         [
+                            "Pay bills"
+                         ]
+                      ]
+                   },
+                   "match":{
+                      "location":"steps/todo_list_steps.py:24",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"When",
+                   "step_type":"when",
+                   "name":"the user clears the to-do list",
+                   "location":"todo_list.feature:38",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:101",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the to-do list should be empty.",
+                   "location":"todo_list.feature:39",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:111",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                }
+             ],
+             "status":"passed"
+          },
+          {
+             "type":"scenario",
+             "keyword":"Scenario",
+             "name":"Verifying the to-do list is empty",
+             "tags":[
+                
+             ],
+             "location":"todo_list.feature:41",
+             "steps":[
+                {
+                   "keyword":"Given",
+                   "step_type":"given",
+                   "name":"the to-do list is empty",
+                   "location":"todo_list.feature:42",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:6",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0
+                   }
+                },
+                {
+                   "keyword":"Then",
+                   "step_type":"then",
+                   "name":"the to-do list should be empty.",
+                   "location":"todo_list.feature:43",
+                   "match":{
+                      "location":"steps/todo_list_steps.py:111",
+                      "arguments":[
+                         
+                      ]
+                   },
+                   "result":{
+                      "status":"passed",
+                      "duration":0.0009942054748535156
+                   }
+                }
+             ],
+             "status":"passed"
+          }
+       ]
+    }
+ ]
